@@ -1,0 +1,315 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    padding: 0 4rem;
+}
+
+header{
+    padding: 25px 0;
+    position: fixed;
+    width: 100%;
+}
+
+.header-all{
+    display: flex;
+    align-items: center;
+}
+.header-all .left{
+    width: 10%;
+}
+.header-all .left img{
+    width: 100%;
+}
+
+.header-all .right{
+    width: 90%;
+    justify-content: flex-end;
+    display: flex;
+}
+
+#Slider{
+    background-image: url(https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/home-1-slider-image-1.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 10rem 0;
+}
+
+.slider-all{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.slider-text{
+    width: 60%;
+    text-align: center;
+}
+
+.slider-text h2{
+    font-size: 68px;
+    color: #fff;
+}
+
+.slider-text p{
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.slider-text a{
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 15px 50px;
+    text-decoration: none;
+}
+
+.dropdown{
+    position: relative;
+    margin-right: 2rem;
+}
+
+.dropdown:hover .dp-content{
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+}
+
+.dp-content{
+    background-color: #1d1d1d;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    width: 140px;
+    transition: .4s;
+    top:200%;
+    visibility: hidden;
+}
+
+.dp-content a{
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    padding: 5px 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.616);
+    text-decoration: none;
+}
+
+.dropdown span{
+    color: #fff;
+}
+
+.header-all .right i{
+    margin-left: 2rem;
+    color: #fff;
+    font-size: 17px;
+} 
+
+#phone-header{
+    display: none;
+    padding: 10px 0;
+}
+
+#phone-header .all{
+    display: flex;
+    align-items: center;
+}
+
+#phone-header .left{
+    width: 30%;
+}
+#phone-header .right{
+    width: 70%;
+}
+
+#phone-header .all .right img{
+    width: 50%;
+}
+
+#Offer{
+    padding: 6rem 0;
+}
+
+.offer-text{
+    text-align: center;
+}
+.offer-text h2{
+    font-size: 45px;
+    color: #262626;
+}
+.offer-text p{
+    font-size: 18px;
+    color: #262626;
+}
+
+#Offer .all {
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+
+#Offer .all .box{
+    width: 22%;
+    text-align: center;
+}
+
+#Offer img{
+    transition: .4s;
+    filter: grayscale(1);
+}
+
+#Offer img:hover{
+    filter: grayscale(0);
+    transform: translateY(-10px);
+}
+
+@media (max-width:576px) {
+    #phone-header{
+        display: block;
+    }
+    #header{
+        display: none;
+    }
+    .slider-all{
+        justify-content: center;
+    }
+    .slider-text{
+        width: 100%;
+    }
+    #Offer .all .box{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    #Offer .offer-text h2{
+        font-size: 30px;
+    }
+    #Offer .all{
+        flex-wrap: wrap;
+    }
+}
+
+#Shop{
+    background-image: url(https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/h1-bacground-img-1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 6rem 0;
+}
+
+.shop-all{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.shop-all .box {
+    width: 23%;
+}
+.shop-all .box img{
+    width: 100%;
+    transition: .4s;
+}
+
+.shop-all .top:hover img{
+    filter: opacity(0.5);
+}
+.shop-all .bottom{
+    text-align: center;
+}
+
+.shop-all .top{
+    position: relative;
+}
+
+.shop-all .top a{
+    position: absolute;
+    width: 65%;
+    text-align: center;
+    font-size: 13px;
+    opacity: 0;
+    transition: .4s;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #A27C53;
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 40px;
+}
+
+.shop-all .top:hover a{
+    opacity: 1;
+    top: 50%;
+}
+
+#Gallery{
+    padding: 6rem 0;
+}
+
+#Gallery .all{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#Gallery .all .box{
+    width: 24%;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#Gallery .box img{
+    width: 100%;
+    transition: .4s;
+}
+
+#Gallery .box:hover .box-text{
+    opacity: 1;
+}
+#Gallery .box:hover img{
+    filter: brightness(0.5);
+}
+
+#Gallery .box-text{
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    transition: .4s;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* #Form,#Form2{
+    margin-bottom: 6rem;
+}
+
+#Form2{
+    background-color: blue;
+}
+
+form{
+    width: 20%;
+    background-color: #fff;
+    padding-right: 10px;
+    border: 1px solid grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+input{
+    border: none;
+    padding: 10px 5px;
+    outline: none;
+}
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+} */
